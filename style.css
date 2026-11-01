@@ -1,7 +1,4 @@
-/* ============================================
-   Warung Pecel Lele Mas Ajik
-   Tema: Putih & Hijau
-   ============================================ */
+/*CSS Warung Pecel Lele Dengan Tema Putih & Hijau*/
 
 :root {
     --hijau: #2f9e44;
@@ -14,7 +11,7 @@
     --abu: #e9ecef;
     --teks: #212529;
     --teks-halus: #495057;
-    --oranye: #e8590c; /* tetap dipakai sedikit untuk aksen harga */
+    --oranye: #e8590c; 
     --shadow: 0 4px 12px rgba(47, 158, 68, 0.15);
     --radius: 12px;
 }
@@ -366,15 +363,16 @@ form.filter select:focus {
 .info-item ul {
     list-style: none;
     padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
 .info-item li {
     padding: 0.2rem 0;
 }
 
-.info-item li::before {
-    content: "🌿 ";
-}
+
 
 .cta {
     text-align: center;
@@ -386,3 +384,18 @@ form.filter select:focus {
     margin-bottom: 1rem;
 }
 
+/* ========== BANNER SPANDUK ========== */
+.banner-container {
+    text-align: center;
+    margin: 2rem auto 0;
+    max-width: 800px;
+    padding: 0 1rem;
+}
+
+.banner-spanduk {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    border: 2px solid var(--hijau-pucat);
+}
