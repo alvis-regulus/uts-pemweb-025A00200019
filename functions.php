@@ -1,8 +1,8 @@
 <?php
-// functions.php — fungsi buatan sendiri
+// functions.php
 
 /**
- * Escape teks agar aman ditampilkan di HTML (mencegah XSS).
+ * Escape teks
  */
 function e($teks): string
 {
@@ -10,7 +10,7 @@ function e($teks): string
 }
 
 /**
- * Ubah angka menjadi format rupiah.
+ * angka format rupiah.
  */
 function formatRupiah(int $angka): string
 {
@@ -36,7 +36,7 @@ function filterMenu(array $menu, string $kategori = 'semua', string $kata = ''):
 }
 
 /**
- * Urutkan menu: nama (A-Z), termurah, atau termahal.
+ * Urutan menu: nama (A-Z), termurah, atau termahal.
  */
 function urutkanMenu(array $menu, string $urut): array
 {
@@ -51,7 +51,6 @@ function urutkanMenu(array $menu, string $urut): array
             usort($menu, fn($a, $b) => strcasecmp($a['nama'], $b['nama']));
             break;
         default:
-            // urutan bawaan dari data.php
             break;
     }
 
@@ -59,7 +58,7 @@ function urutkanMenu(array $menu, string $urut): array
 }
 
 /**
- * Hitung statistik sederhana dari daftar menu.
+ * statistik dari daftar menu.
  */
 function statistikMenu(array $menu): array
 {
@@ -78,7 +77,7 @@ function statistikMenu(array $menu): array
 }
 
 /**
- * Daftar kategori unik dari data menu.
+ * Daftar kategori dari data menu.
  */
 function daftarKategori(array $menu): array
 {
@@ -86,7 +85,7 @@ function daftarKategori(array $menu): array
 }
 
 /**
- * Ubah teks menjadi slug (untuk URL), contoh: "Pecel Lele" -> "pecel-lele".
+ * Ubah teks menjadi untuk URL.
  */
 function buatSlug(string $teks): string
 {
@@ -96,7 +95,7 @@ function buatSlug(string $teks): string
 }
 
 /**
- * Tampilkan gambar menu. Jika file gambar tidak ada, pakai emoji placeholder.
+ * Tampilkan gambar menu. Jika file gambar tidak ada, emoji placeholder yang akan muncul.
  */
 function tampilGambarMenu(array $item): string
 {
@@ -113,7 +112,7 @@ function tampilGambarMenu(array $item): string
 }
 
 /**
- * Cetak bagian atas halaman (head + navigasi).
+ * Cetak bagian atas halaman head + navigasi.
  */
 function renderHeader(string $judul, string $halamanAktif): void
 {
@@ -130,7 +129,7 @@ function renderHeader(string $judul, string $halamanAktif): void
     echo '  <link rel="stylesheet" href="style.css">' . "\n";
     echo "</head>\n<body>\n";
     echo '<header class="site-header"><div class="container">' . "\n";
-    echo '  <a class="brand" href="index.php">🔥 Warung Pecel Lele Mas Ajik</a>' . "\n";
+    echo '  <a class="brand" href="index.php"> Warung Pecel Lele Mas Ajik</a>' . "\n";
     echo '  <nav>';
     foreach ($nav as $kunci => [$url, $label]) {
         $kelas = ($kunci === $halamanAktif) ? ' class="aktif"' : '';
