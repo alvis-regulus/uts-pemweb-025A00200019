@@ -100,3 +100,7 @@ Fungsi bawaan lain yang dipakai, tetapi **bukan** fungsi array: `htmlspecialchar
 ## 6. Catatan pemakaian AI
 
 Asisten AI (Grok) dipakai untuk menjelaskan isi kode dan membadingkan hasil kode saya di bagian: `functions.php`, `style.css` di bagian `renderFooter` dan `renderHeader`.
+
+## 7. Screenshoot
+<img width="1918" height="762" alt="Screenshot_20261101164306" src="https://github.com/user-attachments/assets/61a83a48-881b-4c0d-8281-48d5d8a73f43" />
+<img width="1918" height="908" alt="Screenshot_20261101164454" src="https://github.com/user-attachments/assets/e17e6379-3486-4f9c-b7ea-6bd52578aa4b" />
